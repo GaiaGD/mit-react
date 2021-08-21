@@ -1,0 +1,28 @@
+<h1>ATM EXAMPLE</h1>
+<label className="label huge">
+    Deposit:
+    <input type="number" onChange="handleChange(value)"></input>
+    <input type="submit" onclick="handleSubmit()"></input>
+    <h2 id="total">Account Balance $0</h2>
+</label>
+<script>
+
+    // current "status"
+    let depositTransaction =  0;
+    let currentBalance = 0;
+    // let showBalance = `Account  $0` ;
+
+    // value entered
+    const handleChange = value => {
+        console.log(`handleChange ${value}`);
+        depositTransaction = Number(value);
+    };
+
+    // value added to the current Balance
+    const handleSubmit = () => {
+        currentBalance += depositTransaction;
+        status = `Account Balance $${currentBalance}`;
+        document.getElementById('total').innerHTML = status;
+    };
+
+</script>

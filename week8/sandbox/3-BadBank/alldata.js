@@ -1,0 +1,6 @@
+function AllData() {
+    const ctx = React.useContext(UserContext);
+    return (
+        <h1>All Data -- {JSON.stringify(ctx)}</h1>
+    );
+}
